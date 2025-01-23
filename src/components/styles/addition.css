@@ -1,0 +1,90 @@
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: salmon;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.main {
+    width: 100%;
+    max-width: 100%;
+    /* Prevents overflow */
+    min-height: 100vh;
+    background-color: #f8efef;
+    position: relative;
+    margin: 0 auto;
+    /* Center-align */
+}
+
+.main__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    /* Prevents overflow */
+    padding: 0 1rem;
+    /* Ensures content doesn't touch the edges */
+}
+
+.section__container {
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main__img img {
+    width: 100%;
+    /* Make the image responsive */
+    max-width: 400px;
+    /* You can adjust the max-width as needed */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ddd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+    .main__container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+        height: 115vh;
+       
+        /* Add some padding to prevent edge touch */
+    }
+
+    .section__container {
+        flex-direction: column;
+        /* padding: 20rem; */
+    }
+
+    .section__img img {
+        width: 80%;
+        /* Make image smaller for mobile */
+        height: auto;
+       
+    }
+
+    /* Adjust font sizes for readability */
+    .text h1,
+    .section__content h1 {
+        font-size: 2rem;
+    }
+}

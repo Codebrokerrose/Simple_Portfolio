@@ -1,0 +1,95 @@
+/* Header CSS */
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar {
+    margin: 0 auto;
+    display: none;
+    /* Initially hidden */
+}
+
+.navbar.active {
+    display: flex;
+    /* Show the menu when active */
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    margin: 1.2rem;
+}
+
+ul li button {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul li button:hover {
+    border-bottom: 3px solid red;
+}
+
+.changer {
+    display: flex;
+    margin-right: 1.5rem;
+}
+
+.menu {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 50px;
+}
+
+.closed .close {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+@media (max-width: 970px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .navbar {
+        transition: 0.3s ease;
+    }
+
+    ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    ul li {
+        margin-block: 2rem;
+    }
+
+    ul a {
+        font-size: 20px;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .changer .menu {
+        display: block;
+    }
+}

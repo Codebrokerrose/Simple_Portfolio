@@ -1,0 +1,164 @@
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to right, #8ec5fc, #e0c3fc);
+    /* Softer gradient */
+    padding: 2rem;
+}
+
+.section__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    max-width: 1200px;
+    width: 100%;
+    background: #ffffff;
+    /* Clean white background */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2.5rem;
+    gap: 2rem;
+}
+
+.section__img img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #e0c3fc;
+    /* Matches gradient */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section__img img:hover {
+    transform: scale(1.05);
+    /* Subtle zoom-in effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.section__content {
+    flex: 1;
+    text-align: left;
+    color: #333;
+}
+
+.section__content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.section__skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.skill {
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    /* Blue gradient */
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.section__projects {
+    margin-top: 2rem;
+}
+
+.section__projects h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project {
+    background: linear-gradient(135deg, #ffffff, #f4f7fa);
+    /* Soft gradient for a modern look */
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #444;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-left: 5px solid #6dd5ed;
+    /* Adds a color accent to the left */
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project a {
+    font-size: 1rem;
+    color: #2193b0;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #6dd5ed;
+    text-decoration: underline;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    /* Lift effect for projects */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-left-color: #2193b0;
+    /* Changes border accent on hover */
+}
+
+@media (max-width: 768px) {
+    .project {
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
