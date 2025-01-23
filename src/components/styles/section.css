@@ -154,11 +154,26 @@
         padding: 1.2rem;
         font-size: 1rem;
     }
+           .section__container {
+            width: 85%;
+               flex-direction: column;
+               align-items: center;
+           }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+    
     .project {
         padding: 1rem;
         font-size: 0.9rem;
+        /* width: 70%; */
+        margin-left: 100px ;
+        margin-right: 100px;
+        
+    }
+        .section__container{
+            width: 70%;
+        flex-direction: column;
+        align-items: center;
     }
 }

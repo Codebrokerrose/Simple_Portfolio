@@ -139,11 +139,11 @@ button:hover {
 
 @media (max-width: 768px) {
     .inputs {
-        width: 90%;
+        width: 60%;
     }
 
     .education {
-        width: 90%;
+        width: 60%;
     }
 
     input,
